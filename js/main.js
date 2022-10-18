@@ -37,15 +37,13 @@ for (let i = 0; i <= 200; i++) {
   photoComments.push(i);
 }
 
-const getRandomArrayElements = (element) => element
-  [getRandomIntInclusive(0, element.length - 1)];
+const getRandomElementOfArray = (someArray) => someArray[getRandomIntInclusive(0, someArray.length - 1)];
 
 function createPhotoDescription(id) {
-  console.log();
   return {
     id: id,
-    likes: getRandomArrayElements(photoLikes),
-    comments: getRandomArrayElements(photoComments),
+    likes: getRandomElementOfArray(photoLikes),
+    comments: getRandomElementOfArray(photoComments),
     url: `photos/${id}.jpg`,
     description: `Описание фотографии ${id}`
   };
@@ -57,19 +55,19 @@ for (let j = 0; j < 25; j++) {
 }
 
 
-const createPhotoDescription2 = (l1, l2) => {
-  console.log();
-  return {
-    id: l2 + 1,
-    likes: getRandomArrayElements(photoLikes),
-    comments: getRandomArrayElements(photoComments),
-    url: `photos/${l2 + 1}.jpg`,
-    description: `Описание фотографии ${l2 + 1}`
-  };
-};
+// const createPhotoDescription2 = (l1, l2) => {
+//   console.log();
+//   return {
+//     id: l2 + 1,
+//     likes: getRandomArrayElements(photoLikes),
+//     comments: getRandomArrayElements(photoComments),
+//     url: `photos/${l2 + 1}.jpg`,
+//     description: `Описание фотографии ${l2 + 1}`
+//   };
+// };
 
-const restPhotos2 = Array.from({length: 25}, createPhotoDescription2);
-console.log(restPhotos2[0]);
+// const restPhotos2 = Array.from({length: 25}, createPhotoDescription2);
+// console.log(restPhotos2[0]);
 
 // const restPhotos3 = restPhotos2.map(createPhotoDescription2);
 // console.log(restPhotos3[0]);
