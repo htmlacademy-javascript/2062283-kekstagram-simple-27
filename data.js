@@ -1,4 +1,4 @@
-import {getRandomElementOfArray} from '/js/util.js';
+import {getRandomElementOfArray} from './util.js';
 
 const photoLikes = [];
 for (let i = 15; i <= 200; i++) {
