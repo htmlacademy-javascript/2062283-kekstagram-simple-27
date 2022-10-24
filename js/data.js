@@ -25,7 +25,6 @@ for (let j = 0; j < 25; j++) {
   restPhotos.push(createPhotoDescription(j));
 }
 
-console.log(restPhotos);
 
 // const createPhotoDescription2 = (l1, l2) => {
 //   console.log();
