@@ -12,6 +12,6 @@ function getRandomIntInclusive(min, max) {
   return NaN;
 }
 
-const getRandomElementOfArray = (someArray) => someArray[getRandomIntInclusive(0, someArray.length - 1)];
+export const getRandomElementOfArray = (someArray) => someArray[getRandomIntInclusive(0, someArray.length - 1)];
 
-export {getRandomElementOfArray};
+
