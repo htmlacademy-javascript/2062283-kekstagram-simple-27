@@ -15,7 +15,7 @@ function createPhotoDescription(id) {
     id: id,
     likes: getRandomElementOfArray(photoLikes),
     comments: getRandomElementOfArray(photoComments),
-    url: `photos/${id}.jpg`,
+    url: `photos/${id + 1}.jpg`,
     description: `Описание фотографии ${id}`
   };
 }
@@ -24,8 +24,7 @@ const restPhotos = [];
 for (let j = 0; j < 25; j++) {
   restPhotos.push(createPhotoDescription(j));
 }
-
-
+export {restPhotos};
 // const createPhotoDescription2 = (l1, l2) => {
 //   console.log();
 //   return {
