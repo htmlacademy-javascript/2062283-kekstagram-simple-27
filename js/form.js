@@ -1,5 +1,5 @@
-import {isEscapeKey} from './util.js';
-const imageForm = document.querySelector('.img-upload__form')
+// import {isEscapeKey} from './util.js';
+const imageForm = document.querySelector('.img-upload__form');
 const uploadImage = document.querySelector('#upload-file');
 const modalForm = document.querySelector('.img-upload__overlay');
 const cancelUpload = document.querySelector('#upload-cancel');
