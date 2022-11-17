@@ -1,4 +1,3 @@
-import {restPhotos} from './data.js';
 
 const picturesContainer = document.querySelector('.pictures');
 
@@ -6,20 +5,27 @@ const thumbnailTemplate = document.querySelector('#picture').content.querySelect
 
 const fragment = document.createDocumentFragment();
 
-for (let i = 0; i < restPhotos.length; i++) {
-  const thumbnailElement = thumbnailTemplate.cloneNode(true);
+const renderUserPics = (data) => {
 
-  const elementLink = thumbnailElement.querySelector('.picture__img');
-  elementLink.src = restPhotos[i].url;
+  for (let i = 0; i < data.length; i++) {
+    const thumbnailElement = thumbnailTemplate.cloneNode(true);
 
-  const elementLikes = thumbnailElement.querySelector('.picture__likes');
-  elementLikes.textContent = restPhotos[0].likes;
+    const elementLink = thumbnailElement.querySelector('.picture__img');
+    elementLink.src = data[i].url;
 
-  const elementComments = thumbnailElement.querySelector('.picture__comments');
-  elementComments.textContent = restPhotos[0].comments;
+    const elementLikes = thumbnailElement.querySelector('.picture__likes');
+    elementLikes.textContent = data[i].likes;
+
+    const elementComments = thumbnailElement.querySelector('.picture__comments');
+    elementComments.textContent = data[i].comments;
 
 
-  fragment.appendChild(thumbnailElement);
-}
+    fragment.appendChild(thumbnailElement);
+  }
 
-picturesContainer.appendChild(fragment);
+  picturesContainer.appendChild(fragment);
+
+};
+
+export {renderUserPics};
+
