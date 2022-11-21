@@ -11,6 +11,7 @@ const scaleUpButton = document.querySelector('.scale__control--bigger');
 const scaledImageContainer = document.querySelector('.img-upload__preview');
 const scaledImage = scaledImageContainer.querySelector('img');
 const effects = document.querySelectorAll('.effects__radio');
+const noEffect = document.querySelector('.effects__radio');
 
 
 let newValue = 100;
@@ -45,6 +46,7 @@ const onScaleUp = () => {
 uploadImage.addEventListener('click', () => {
   modalForm.classList.remove('hidden');
   document.body.classList.add('modal-open');
+  noEffect.checked = true;
   scaleValue.value = '100%';
   document.addEventListener ('keydown', (onModalEscKeyDown));
   scaleDownButton.addEventListener('click', (onScaleDown));
@@ -91,7 +93,6 @@ cancelUpload.addEventListener('click', () => {
   modalForm.classList.add('hidden');
   document.body.classList.remove('modal-open');
   document.removeEventListener('keydown', (onModalEscKeyDown));
-  this.form.reset();
 });
 
 
