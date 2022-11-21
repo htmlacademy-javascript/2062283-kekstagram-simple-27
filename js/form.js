@@ -11,8 +11,7 @@ const scaleUpButton = document.querySelector('.scale__control--bigger');
 const scaledImageContainer = document.querySelector('.img-upload__preview');
 const scaledImage = scaledImageContainer.querySelector('img');
 const effects = document.querySelectorAll('.effects__radio');
-const noEffect = document.querySelector('.effects__radio');
-
+const noEffect = document.querySelector('#effect-none');
 
 let newValue = 100;
 
