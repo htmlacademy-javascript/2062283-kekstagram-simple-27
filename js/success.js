@@ -1,4 +1,3 @@
-
 const successMessageTemplate = document.querySelector('#success').content.querySelector('.success');
 const successMessage = successMessageTemplate.cloneNode(true);
 const successButton = successMessage.querySelector('.success__button');

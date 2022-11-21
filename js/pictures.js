@@ -1,4 +1,3 @@
-
 const picturesContainer = document.querySelector('.pictures');
 
 const thumbnailTemplate = document.querySelector('#picture').content.querySelector('.picture');
