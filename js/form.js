@@ -13,7 +13,10 @@ const scaledImage = scaledImageContainer.querySelector('img');
 const effects = document.querySelectorAll('.effects__radio');
 const noEffect = document.querySelector('#effect-none');
 
-let newValue = 100;
+let NEWVALUE = 100;
+const MAXVALUE = 100;
+const MINVALUE = 25;
+const STEP = 25;
 
 const onModalEscKeyDown = (evt) => {
   if (evt.key === 'Escape') {
@@ -27,18 +30,18 @@ const onModalEscKeyDown = (evt) => {
 };
 
 const onScaleDown = () => {
-  if (newValue >= 50) {
-    newValue = newValue - 25;
-    scaledImage.style.transform = `scale(${newValue / 100})`;
-    scaleValue.value = `${newValue}%`;
+  if (NEWVALUE > MINVALUE) {
+    NEWVALUE = NEWVALUE - STEP;
+    scaledImage.style.transform = `scale(${NEWVALUE / MAXVALUE})`;
+    scaleValue.value = `${NEWVALUE}%`;
   }
 };
 
 const onScaleUp = () => {
-  if (newValue <= 75) {
-    newValue = newValue + 25;
-    scaleValue.value = `${newValue}%`;
-    scaledImage.style.transform = `scale(${newValue / 100})`;
+  if (NEWVALUE < MAXVALUE) {
+    NEWVALUE = NEWVALUE + STEP;
+    scaleValue.value = `${NEWVALUE}%`;
+    scaledImage.style.transform = `scale(${NEWVALUE / MAXVALUE})`;
   }
 };
 
